@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1 id="number"></h1>
+
+    <script>
+        if(!getToken()) {
+            refresh();
+        }
+
+        const num = document.getElementById('number');
+
+        setInterval(() => {
+            fetchData().then(x => num.innerText = x);
+        },1000);
+
+    </script>
+</body>
+</html>
